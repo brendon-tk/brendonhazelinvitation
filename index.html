@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<meta name="color-scheme" content="light only">
+<meta name="theme-color" content="#0b0b0a">
+<meta name="supported-color-schemes" content="light">
 <title>Brendon &amp; Hazel</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,15 +23,15 @@
     --lgrey:rgba(247,245,239,0.6);
   }
   *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
+  html,body{margin:0;padding:0;color-scheme:dark only;}
   body{
     background:var(--black);
-    color:var(--ink);
+    color:var(--ivory);
     font-family:'EB Garamond', serif;
     -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
   }
-  ::selection{background:var(--ink);color:var(--ivory);}
+  ::selection{background:var(--ivory);color:var(--black);}
   h1,h2,h3{font-family:'Cormorant Garamond', serif;font-weight:500;margin:0;}
   .script{font-family:'Tangerine', cursive;font-weight:700;}
   img{max-width:100%;display:block;}
@@ -81,14 +84,14 @@
   .reveal-fallback:hover{background:rgba(247,245,239,0.08);}
 
   /* ============ SHARED SECTION STYLES ============ */
-  .section{max-width:640px;margin:0 auto;padding:96px 28px;text-align:center;}
+  .section{max-width:640px;margin:0 auto;padding:96px 28px;text-align:center;background:var(--black);color:var(--ivory);}
   .section.dark{background:var(--panel);max-width:none;color:var(--ivory);}
   .section.dark .inner{max-width:640px;margin:0 auto;}
   .section.black{background:var(--black);max-width:none;color:var(--ivory);}
   .section.black .inner{max-width:640px;margin:0 auto;}
-  .rule{width:56px;height:1px;background:var(--line);margin:26px auto;}
+  .rule{width:56px;height:1px;background:var(--dline);margin:26px auto;}
   .rule.on-dark{background:var(--dline);}
-  .eyebrow{font-size:12px;letter-spacing:0.32em;text-transform:uppercase;color:var(--grey);}
+  .eyebrow{font-size:12px;letter-spacing:0.32em;text-transform:uppercase;color:var(--lgrey);}
   .eyebrow.on-dark{color:var(--lgrey);}
   .script-title{font-family:'Tangerine', cursive;font-weight:700;font-size:46px;line-height:1;}
 
@@ -98,20 +101,20 @@
   .ribbon-wrap svg{width:100%;height:100%;}
   .ribbon-text{
     position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-    font-family:'Tangerine', cursive;font-weight:700;font-size:30px;color:var(--ink);
+    font-family:'Tangerine', cursive;font-weight:700;font-size:40px;color:var(--ivory);
   }
   .intro-copy{
-    font-family:'Cormorant Garamond', serif;font-style:italic;
-    font-size:clamp(18px,3.2vw,21px);line-height:1.75;color:var(--ink);
-    max-width:420px;margin:26px auto 0;
+    font-family:'EB Garamond', serif;font-style:normal;
+    font-size:12px;letter-spacing:0.32em;text-transform:uppercase;line-height:1.9;
+    color:var(--lgrey);max-width:380px;margin:30px auto 0;
   }
   .intro-names{
     font-size:clamp(44px, 11vw, 76px);
     letter-spacing:0.02em;margin-top:30px;line-height:1;
-    font-family:'Cormorant Garamond', serif;
+    font-family:'Cormorant Garamond', serif;font-weight:500;color:var(--ivory);
   }
-  .intro-amp{font-family:'Tangerine', cursive;font-size:clamp(40px,9vw,58px);color:var(--grey);display:block;margin:0;}
-  .intro-loc{font-size:14px;letter-spacing:0.12em;color:var(--grey);margin-top:16px;}
+  .intro-amp{font-family:'Tangerine', cursive;font-size:clamp(40px,9vw,58px);color:var(--lgrey);display:block;margin:0;}
+  .intro-loc{font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:var(--lgrey);margin-top:20px;}
 
   /* ============ COUNTDOWN ============ */
   .count-wrap{display:flex;justify-content:center;gap:22px;margin-top:36px;flex-wrap:wrap;}
@@ -126,36 +129,36 @@
 
   /* ============ OUR STORY ============ */
   #story .story-card{
-    background:var(--ivory);border:1px solid var(--line);
+    background:var(--panel);border:1px solid var(--dline);
     padding:46px 30px;margin-top:36px;
   }
   #story .story-text{
-    font-family:'Cormorant Garamond', serif;font-style:italic;font-size:19px;line-height:1.8;color:var(--ink);
+    font-family:'Cormorant Garamond', serif;font-style:italic;font-size:19px;line-height:1.8;color:var(--ivory);
   }
   .edit-flag{
     display:inline-block;margin-top:16px;font-size:11px;letter-spacing:0.08em;
-    color:var(--grey);border:1px dashed var(--line);padding:6px 12px;
+    color:var(--lgrey);border:1px dashed var(--dline);padding:6px 12px;
   }
 
   /* ============ CEREMONY / DIRECTIONS ============ */
   .ceremony-card{
-    background:var(--card);border:1px solid var(--line);
+    background:var(--panel);border:1px solid var(--dline);
     padding:40px 30px;margin-top:30px;text-align:left;
   }
-  .ceremony-row{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding:12px 0;}
+  .ceremony-row{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--dline);padding:12px 0;}
   .ceremony-row:first-child{padding-top:0;}
   .ceremony-row:last-child{border-bottom:none;}
-  .ceremony-label{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--grey);}
-  .ceremony-value{font-family:'Cormorant Garamond', serif;font-size:18px;color:var(--ink);text-align:right;}
-  .map-frame{width:100%;height:240px;border:1px solid var(--line);filter:grayscale(1) contrast(1.05);margin-top:26px;}
+  .ceremony-label{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--lgrey);}
+  .ceremony-value{font-family:'Cormorant Garamond', serif;font-size:18px;color:var(--ivory);text-align:right;}
+  .map-frame{width:100%;height:240px;border:1px solid var(--dline);filter:grayscale(1) invert(0.92) contrast(0.92);margin-top:26px;}
   .btn-row{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;justify-content:center;}
   .btn{
-    display:inline-block;padding:13px 26px;border:1px solid var(--ink);color:var(--ink);
+    display:inline-block;padding:13px 26px;border:1px solid var(--ivory);color:var(--ivory);
     text-decoration:none;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;
     background:transparent;cursor:pointer;font-family:'EB Garamond', serif;
     transition:background 0.25s ease, color 0.25s ease;
   }
-  .btn:hover{background:var(--ink);color:var(--ivory);}
+  .btn:hover{background:var(--ivory);color:var(--black);}
   .btn.on-dark{border-color:var(--ivory);color:var(--ivory);}
   .btn.on-dark:hover{background:var(--ivory);color:var(--black);}
 
@@ -178,8 +181,8 @@
   .tl-divider span{font-size:15px;}
 
   /* ============ ATTIRE ============ */
-  #attire .attire-title{font-size:clamp(26px,5vw,32px);margin-top:6px;}
-  #attire p{max-width:400px;margin:18px auto 0;color:var(--grey);line-height:1.8;font-size:16px;}
+  #attire .attire-title{font-size:clamp(26px,5vw,32px);margin-top:6px;color:var(--ivory);}
+  #attire p{max-width:400px;margin:18px auto 0;color:var(--lgrey);line-height:1.8;font-size:16px;}
 
   /* ============ RSVP ============ */
   .rsvp-form{text-align:left;max-width:440px;margin:40px auto 0;display:flex;flex-direction:column;gap:22px;}
@@ -250,10 +253,10 @@
   <section id="intro" class="section">
     <div class="ribbon-wrap">
       <svg viewBox="0 0 210 96" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="10,10 90,10 90,86 50,66 10,86" fill="none" stroke="#1c1c1a" stroke-width="1"/>
-        <polygon points="120,10 200,10 200,86 160,66 120,86" fill="none" stroke="#1c1c1a" stroke-width="1"/>
-        <line x1="90" y1="30" x2="120" y2="66" stroke="#1c1c1a" stroke-width="1"/>
-        <line x1="120" y1="30" x2="90" y2="66" stroke="#1c1c1a" stroke-width="1"/>
+        <polygon points="10,10 90,10 90,86 50,66 10,86" fill="none" stroke="#f7f5ef" stroke-width="1"/>
+        <polygon points="120,10 200,10 200,86 160,66 120,86" fill="none" stroke="#f7f5ef" stroke-width="1"/>
+        <line x1="90" y1="30" x2="120" y2="66" stroke="#f7f5ef" stroke-width="1"/>
+        <line x1="120" y1="30" x2="90" y2="66" stroke="#f7f5ef" stroke-width="1"/>
       </svg>
       <div class="ribbon-text">You're Invited</div>
     </div>
@@ -384,7 +387,7 @@
   <!-- ATTIRE -->
   <section id="attire" class="section">
     <p class="eyebrow">Dress Code</p>
-    <h2 class="attire-title"> A Touch of Black &amp; White Attire</h2>
+    <h2 class="attire-title">A Touch of Balck &amp; White </h2>
     <div class="rule"></div>
     <p>Guests are encouraged to dress to impress — refined and polished. Black tie not required.</p>
     <span class="edit-flag">Placeholder — confirm or change your actual dress code</span>
