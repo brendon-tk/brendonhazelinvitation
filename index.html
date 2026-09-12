@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-<meta name="color-scheme" content="light only">
+<meta name="color-scheme" content="dark only">
 <meta name="theme-color" content="#0b0b0a">
-<meta name="supported-color-schemes" content="light">
 <title>Brendon &amp; Hazel</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -645,7 +644,6 @@
   form.addEventListener('submit', function(e){
     e.preventDefault();
     const name = document.getElementById('rsvpName').value.trim();
-    const email = document.getElementById('rsvpEmail').value.trim();
     const guests = document.getElementById('rsvpGuests').value;
     const attending = document.querySelector('.radio-opt.active').dataset.value;
     const diet = Array.from(document.querySelectorAll('.check-opt input:checked')).map(i=>i.value).join(', ') || 'None';
@@ -653,7 +651,6 @@
     const msg = document.getElementById('rsvpMsg').value.trim();
 
     let text = `RSVP — Brendon & Hazel\n\nName: ${name}`;
-    if(email) text += `\nEmail: ${email}`;
     text += `\nResponse: ${attending}\nGuests: ${guests}\nDietary needs: ${diet}`;
     if(otherAllergy) text += `\nOther allergies: ${otherAllergy}`;
     if(msg) text += `\nMessage: ${msg}`;
